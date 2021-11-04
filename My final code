@@ -1,0 +1,52 @@
+#Team 1:
+def coordinates(x,R):
+    """This function calculates the y values of a circle with radius R.\
+    The size of the y array will be double to that of the input x array.
+    Input: Array of x-axis points
+           Radius of circle 
+    Output: Array of y values"""
+
+    #Numpy is imported from inside function in case it has not been previously imported
+    import numpy as np
+    
+    ycoords = []
+    
+    y = np.sqrt(abs((R**2)-(x**2)))
+    ycoords.append(np.round(y,2))
+    
+
+    return ycoords
+
+#Function to calculate diameter and surface area of sphere
+def sphere_properties(R):
+    """This function uses the radius of a sphere to calculate its diameter and surface area.
+    Input: Radius [float]
+    Output: [Diameter, Surface Area] [List]"""
+
+    #Numpy is imported from inside function in case it has not been previously imported
+    import numpy as np
+
+    #Diameter of sphere
+    D = 2*R
+    #Surface area of sphere
+    SA = 4*np.pi*(R**2)
+
+    return [D,SA]
+
+#Team 2:
+def volume(R):
+    """Calculates the volume of a sphere given a radius R
+    Input: Radius
+    Output: Volume of Sphere"""
+    
+    v = (4/3) * np.pi * (R**3)
+    
+    return v
+
+x = np.arange(-10,10,0.5)
+R = 2
+v = volume(R)
+c = coordinates(x, R)
+d = sphere_properties(R)
+
+print('For a sphere with radius', R, 'the volume is', np.round(v,2), 'and the y-coordinates are', c, ', the diameter is', d[0], 'and the surface area is', round(d[1],2))
