@@ -49,4 +49,4 @@ v = volume(R)
 c = coordinates(x, R)
 d = sphere_properties(R)
 
-print('For a sphere with radius', R, 'the volume is', np.round(v,2), 'and the y-coordinates are', c, ', the diameter is', d[0], 'and the surface area is', round(d[1],2))
+print('For a sphere with radius', R, 'the volume is', np.round(v,2), 'and the y-coordinates are', c[0], ', the diameter is', d[0], 'and the surface area is', round(d[1],2))
