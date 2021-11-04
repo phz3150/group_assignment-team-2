@@ -1,0 +1,16 @@
+import numpy as np
+def volume(R):
+    """This function calculates the volume of a sphere with the given radius.
+    Input: Radius [R]
+    Output: Volume of sphere """
+    V = (4/3) * np.pi( R**3 )
+    return V
+# create array for x-coordinates
+x = np.arange(-10, 10, 0.5) 
+# ask for input R:
+R = float(input(' R = '))
+y = coordinates(x,R)
+d = sphere_properties (R)
+V = volume(R)
+# print informative statement:
+print('For a sphere with radius', R, 'the volume is', np.round(V,2), 'and the y-coordinates are', y, ', the diameter is', d[0], 'and the surface area is', round(d[1],2))
